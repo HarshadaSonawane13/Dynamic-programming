@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+void reverseString(string &str,int start,int end)
+{
+  
+   while(start<end)
+   {
+       swap(str[start],str[end]);
+       start++;
+       end--;
+   }
+}
+int main()
+{
+    string str="harshada";
+    int start=0;
+    int end=str.length()-1;
+    reverseString(str,start,end);
+    cout<<str;
+    
+    
+}
