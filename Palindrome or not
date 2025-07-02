@@ -1,0 +1,54 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+bool alphaNumeric(char ch)
+{
+        return (ch>=0 && ch<=9) || (tolower(ch)>='a' && tolower(ch)<='z');
+        
+}
+    
+bool ispalindrome(string str)
+{       int start=0;
+        int end=str.length()-1;
+        
+        while(start<end)
+        {
+            if(!alphaNumeric(str[start]))
+            {
+                start++;
+                continue;
+            }
+            
+            if(!alphaNumeric(str[end]))
+            {
+                end--;
+                continue;
+            }
+            
+            if(tolower(str[start])!=tolower(str[end]))
+            {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+}
+
+
+int main()
+{
+    string str="Ac3e3c&a";
+    
+    
+    if(ispalindrome(str))
+    {
+        cout<<"String is palindrome.";
+    }
+    else{
+               cout<<"String is not palindrome.";
+ 
+    }
+}
