@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+void reverseNum(int num[5],int start,int end)
+{
+    while(start<end)
+    {
+        swap(num[start],num[end]);
+        start++;
+        end--;
+    }
+}
+
+int main()
+{
+    int num[5];
+    int size=5;
+    
+    cout<<"Enter number:";
+    for(int i=0;i<size;i++)
+    {
+        cin>>num[i];
+    }
+    
+    reverseNum(num,0,size-1);
+
+    
+     cout<<"Reverse number:";
+    for(int i=0;i<size;i++)
+    {
+        cout<<num[i]<<" ";
+    }
+    
+
+}
