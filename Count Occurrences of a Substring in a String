@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    string str;
+    string sub;
+    cout<<"Enter a string: ";
+    cin>>str;
+    cout<<"Enter a substring: ";
+    cin>>sub;
+    
+    int count=0;
+    int pos=0;
+    
+    while((pos=str.find(sub,pos))!=string::npos)
+    {
+        count++;
+        pos++;
+    }
+    
+    cout<<"Occurance of "<<sub<<" in "<<str<<": "<<count;
+   
+}
