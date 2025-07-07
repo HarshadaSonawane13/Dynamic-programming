@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+string removeDuplicates(string str)
+{   int seen[256]={0};
+    string result="";
+    
+    for(int i=0;i<str.length();i++)
+    {
+        char ch=str[i];
+        if(seen[int(ch)]==0)
+        {
+            result=result+ch;
+            seen[int(ch)]=1;
+        }
+    }
+
+    return result;
+}
+
+int main()
+{
+    string str;
+    cout<<"Enter a string: ";
+    cin>>str;
+    
+    string output=removeDuplicates(str);
+    
+    cout<<"String after removing duplicates: "<<output;
+    
+
+    
+}
